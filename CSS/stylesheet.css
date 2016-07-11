@@ -1,4 +1,5 @@
 #EntireDisplayDesign{
+	top-margin: 0px;
 	background-position: fixed;
 	background-image: url("Background_Image.jpg");
 	background-size: 200px 400px;
@@ -62,11 +63,10 @@
 	width: 100px;
 	height: 100px;
 }
-
 #ButtomNav a img:hover{
 	transform: scale(1.5);
 	opacity: 1;
-	transition: 0.5s;
+	transition: 0.3s;
 }
 
 @media screen and (min-width:800px){ /*accoring to this part of my code, the drop down icon should disappear if screen width is less than 640px*/
@@ -110,6 +110,9 @@
 		opacity: 0.3;
 		margin-top: 310px;
 		margin-left: 30%;
+	}
+	#HeaderBackgroundImage{
+		display: none;
 	}
 	.icon{
 		margin: 0;
