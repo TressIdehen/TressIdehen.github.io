@@ -69,64 +69,6 @@
 	transition: 0.3s;
 }
 
-@media screen and (min-width:800px){ /*accoring to this part of my code, the drop down icon should disappear if screen width is less than 640px*/
-  .icon a{
-    display:none;
-	}
-	#TopNav{
-		margin-buttom: 0;
-	}
-}
-
-@media screen and (max-width:800px){ /*this makes my aligned menu bar disappear leaving only the dropdown icon to reign*/
-  .menu{
-    display: none;
-	}
-  #Logo{                            /*messing around with logo location here*/
-	float: left;
-	position: relative;
-	padding: 0px;
-	margin: 0px;
-	}
- .icon{
-	 margin: 0;
-	position: relative;
-	padding-right: 90%;
-	}
-	#TopNav ul li{
-		margin: 0;
-	}
-}
-
-@media screen and (max-width:1200px){
-	#ButtomNav{
-	display: none;
-   }
-}
-
-@media screen and (max-width:400px){
-	#Logo{
-		position: fixed;
-		opacity: 0.3;
-		margin-top: 310px;
-		margin-left: 30%;
-	}
-	#HeaderBackgroundImage{
-		display: none;
-	}
-	.icon{
-		margin: 0;
-		display:inline-block;
-		position: relative;
-		padding-right: 90%;
-	}
-	#HomePage{
-		margin-top: 400px;
-	}
-	#TopNav ul li{
-		margin: 0;
-	}
-}
 
 /*this is my homepage.
  the goal here really was to make it appealing specifically for desktop view. due to the fact that i haven't yet become adept with the flex property tool enough to manipulate how the buttom circular nave would react on the small screen, i decided to remove them from there completely while pushing the bounderies on the desktop view*/
@@ -234,24 +176,24 @@ yep it is what it is said to be here nothing to see. going off from the thumbnai
     border: 1px solid #ccc;
 }
 
-#Portfolio article.img img:hover {
-	opacity: 0.70;
-	transform: scale(0.9);
-	transition: 0.3s;
-}
 
 #Portfolio article .img img{
 	width: 100%;
     height: auto;
 	border:solid;
 	border-radius: 50%;
-	border-color:rgba(255,255,255,0.20);
+	border-color:rgba(255,255,255,0.50);
 }
-
 
 #Portfolio article.desc {
     padding: 15px;
     text-align: center;
+}
+
+#Portfolio article.img img:hover {/**/
+	opacity: 0.70;
+	transform: scale(0.9);
+	transition: 0.3s;
 }
 
 * {
@@ -264,18 +206,6 @@ yep it is what it is said to be here nothing to see. going off from the thumbnai
     width: 24.99999%;
 }
 
-@media only screen and (max-width: 700px){
-    .responsive {
-        width: 49.99999%;
-        margin: 6px 0;
-    }
-}
-
-@media only screen and (max-width: 500px){
-    .responsive {
-        width: 100%;
-    }
-}
 
 .clearfix:after {
     content: "";
@@ -306,105 +236,35 @@ yep it is what it is said to be here nothing to see. going off from the thumbnai
 	width: auto;
 }
 
-#SendMail{
+/*From here i start to focus on my link button, trying to see how the background grey borther and the icon play out on the regular page*/
+
+
+#Media_Icon{/*Icon Background Grey Border*/
 	position: relative;
-	display: block;
-	background-color: rgba(255,255,255,0.20);
-	border: solid;
-	border-radius: 30px;
-	float: right;
-	width: 73%;
-	height: 100%;
-	margin-top: 10px;
-	margin-bottom: 10px;	
-}
-
-label {
-    display:block;
-    margin-top:20px;
-    letter-spacing:2px;
-}
-
-form {
-	position:relative;
-	display: block;
-    margin-left: 5%;
-	margin-top: 5%;
-	margin-bottom: 2%;
-}
-
-input, textarea {
-	width:80%;
-	height:50%;
-	background:#efefef;
-	border:1px solid #dedede;
-	padding:10px;
-	margin-top:3px;
-	font-size:0.9em;
-	color:#3a3a3a;
-	margin-left:10%;
-}
-
-textarea {
-	border:solid;
-	border-color:rgba(0,0,0,0.40);
-	border-radius: 20px;
-	height:150px;
-	font-family:Arial, Helvetica, sans-serif;
-	color: rgba(255,255,255,1.00);
-	background:rgba(0,0,0,0.50);
-}
-
-input:focus, textarea:focus {
-    border:1px solid #97d6eb;
-}
-
-#submit {
-	position: relative;
-    width:auto;
-    height:auto;
-	font-weight: bold;
-    background-color: rgba(0,0,0,0.40);
-    border:solid;
-	border-color: rgba(255,255,255,0.20);
-	border-radius: 20px;
-    margin-top:2px;
-	margin-left: 40%;
-    cursor:pointer;
-}
-
-#submit:hover {
-	opacity:0.9;
-	transform:scale(1.1);
-}
-
-
-#MediaIcon{
-	position: relative;
-	height: 100%;
-	width: 15%; 
-    text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
     background-color: #555;
 	border: solid;
 	border-radius: 20px;
-	float: left;
-	margin-top: 60px;
 }
 
-#MediaIcon a{
+#Media_Icon a{/*This is actually the icon themselves*/
 	position: relative;
-	width: 100%;
-    display: block;
+	border: solid;
+	border-radius: 20px;
+	border-color: rgba(255,255,255,0.50);
+	padding: 10px;
+	margin-left: 110px;
+    display: inline;
     color: white;
-    font-size: 200%;
+    font-size: 500%;
 }
-
-#MediaIcon a:hover{
-	background-color: rgba(255,255,255,0.30);
-	width: 100%;
-	transition: 2s;
-	border: rgba(255,255,255,0.30);
-	border-radius: 30%;
+/*This is where my work on the connect with me icon rection to the mouse hover setting beggins. the goals really was to make it so that
+the icon grew when being hovered upon, in a eased in and out fashion*/
+#Media_Icon a:hover{
+	background-color: rgba(255,255,255,0.30);	
+	transform: scale(0.9,0.9);
+	transition: 1s;
 }
 
 #Footer{
@@ -416,8 +276,92 @@ input:focus, textarea:focus {
 	border: solid;
 	border-color: rgba(255,246,246,0.20);
 	border-radius: 20px;
-	margin-top: 500px;
+	margin-top: 5px;
 	margin-bottom: 0%
 }
 
+/*All OF THE RESPONSIVE FUNCTIONS TO THE DIFFERENT COMPONENTS TO MY WEBPAGE AS A WHOLE. AND HERE IT ALL IS*/
 
+@media only screen and (max-width: 700px){
+    .responsive {/*this points to the portfolio behaviour during the screen regular desktop size starting at 700px*/
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .responsive {/*this points at it's reaction during a phone screen size*/
+        width: 100%;
+    }
+}
+@media screen and (min-width:800px){ /*accoring to this part of my code, the drop down icon should disappear if screen width is less than 640px*/
+  .icon a{
+    display:none;
+	}
+	#TopNav{
+		margin-buttom: 0;
+	}
+}
+
+@media screen and (max-width:800px){ /*this makes my aligned menu bar disappear leaving only the dropdown icon to reign*/
+  .menu{
+    display: none;
+	}
+  #Logo{                            /*messing around with logo location here*/
+	float: left;
+	position: relative;
+	padding: 0px;
+	margin: 0px;
+	}
+ .icon{
+	 margin: 0;
+	position: relative;
+	padding-right: 90%;
+	}
+	#TopNav ul li{
+		margin: 0;
+	}
+}
+
+@media screen and (max-width:1200px){
+	#ButtomNav{
+	display: none;
+   }
+}
+
+@media screen and (max-width:400px){
+	#Logo{/*this addresses the back transparent logo that appears when the screen is phone size*/
+		position: fixed;
+		transform:scale(0.7,0.7);
+		opacity: 0.7;
+		margin-top: 170px;
+		margin-left: 25%;
+	}
+	#HeaderBackgroundImage{
+		display: none;
+	}
+	.icon{
+		margin: 0;
+		display:inline-block;
+		position: relative;
+		padding-right: 90%;
+	}
+	#HomePage{
+		margin-top: 400px;
+	}
+	#TopNav ul li{
+		margin: 0;
+	}
+	#Media_Icon a{/*This is actually the icon themselves*/
+	position: relative;
+	border: solid;
+	border-radius: 20px;
+	border-color: rgba(255,255,255,0);
+	padding-right: 10px;
+	padding-left: 10px;
+    display: inline-block;
+    color: white;
+    font-size: 500%;
+	font-stretch:expanded;
+	}
+}
