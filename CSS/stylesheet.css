@@ -207,6 +207,16 @@ yep it is what it is said to be here nothing to see. going off from the thumbnai
 	font-size: 150%;
 }
 
+#Portfolio .responsive article a{
+	text-decoration: none;
+	color: rgba(255,255,255,1.00);
+}
+
+#Portfolio .responsive article a:hover{
+	text-decoration: none;
+	color: rgba(255,255,255,0.50);
+}
+
 #Portfolio article.img img:hover {/**/
 	opacity: 0.70;
 	transform: scale(0.9);

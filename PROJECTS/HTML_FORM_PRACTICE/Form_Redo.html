@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>EXercise 2.5 Complete</title>
+		<link rel="stylesheet" href="form_stylesheet.css">
+		<script src="form_javascript.js"></script>
+	</head>
+
+	<body>
+    	
+       <form method="post" action="thank you page.html">
+			<table cellpadding="10" border="1" style="width:35%" background="">
+			<tr>
+				<th colspan="2"> Create Account Profile </th>
+			</tr>
+			<tr>
+				<td>First Name</td>
+				<td><input type="text" placeholder="Name" required></td>
+			</tr>
+			<tr>
+				<td>Last Name</td>
+				<td><input type="text" placeholder="LastName" required></td>
+			</tr>
+			<tr>
+				<td id="email">Email Address</td>
+				<td><input type="email" placeholder="1234@email.com" required></td>
+			</tr>
+			<tr>
+				<td id="password">Password</td>
+				<td><input type="password" placeholder="Password" required></td>
+			</tr>
+			<tr>
+				<td id="password_confirmation">Password Confirmation</td>
+				<td><input type="password" placeholder="Confirm Password" required></td>
+			</tr>
+			<tr>
+				<!--in this particular code for gender prefered pronoun, i had hope to create a list of radio options, enforcing the applicant to choose one without limiting
+				the applicant to the option that i create. i had hoped that upon click the "other" radio button, a text field would show up, allowing the user the ability to
+				then type whatever gender pronouns they may prefer. however, what ends up happening with the coding is, while initially this command is executed fine if the 
+				applicant were to select the "other" radio button, the problem; however, occurs if the applicant in the middle of typing on the "other" text field that popped up
+				decides that they'd rather just use one of the already present radio options, then their already typed information remain, along with their newly selected radio
+				option-->
+				<td>Prefered Gender Pronoun</td>
+				<td id="genderSelector">
+					<input type="radio" name="gender" value="Him/His">Him/His <br>
+					<input type="radio" name="gender" value="Her/Her's">Her/Her's <br>
+					<input type="radio" name="gender" value="They/Them">They/Them <br>
+					<input type="radio" name="gender" value="" onclick=type="text">Other<br>
+				</td>
+			</tr>
+				<td valign="top">Topic/Topics of Interests</td>
+				<td>
+					<input type="checkbox" name="interest" value="race">Race<br>
+					<input type="checkbox" name="interest" value="class">Class<br>
+					<input type="checkbox" name="interest" value="gender">Gender<br>
+					<input type="checkbox" name="interest" value="ability">Ability <br>
+					<input type="checkbox" name="interest" value="politics">Politics <br>
+					<input type="checkbox" name="interest" value="sexuality">Sexuality <br>
+				</td>
+			<tr>
+				<td> Participation Preference </td>
+				<td>
+					<select name="Role">
+						<option value="role">Facilitator</option>
+						<option value="role">Mediator</option>
+						<option value="role">Recorder</option>
+						<option value="role">Time-Keeper</option>
+						<option value="role">Contributor</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Personal Introduction</td>
+				<td>
+					<textarea name="Personal Introduction" col="100" rows="5"></textarea>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					<input type="submit" value="submit">
+				</td>
+			</tr>
+       
+	</body>
+    
+</html>
