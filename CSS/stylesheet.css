@@ -7,43 +7,52 @@ body{
 	background-origin: content-box;
 }
 
-#TopNav ul{
-	position: relative;
-	background-color: rgba(0,0,0,0.50);
-	border: solid;
-	border-width: 1px;
-	border-color: rgba(255,255,255,0.20);
-	margin-top: 0%;
+ul.topnav{
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:rgba(28,28,30,1.00);
+	border: 1px solid #ddd;
+	border-bottom-right-radius: 5%;
 }
 
-#TopNav ul li{
-	display: inline;
-	font-size: 150%;
-	padding: 20px;
-	margin: 20px;
+ul.topnav li{
+	float:left;
 }
 
-#TopNav ul li a{
-	text-decoration: none;
-	color: rgba(255,255,255,1.00);
+ul.topnav li a{
+	display: inline-block;
+    color:rgba(255,255,255,1.00);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
 	font-family: "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
 	
 }
 
-#TopNav ul li a:hover{              /*top navigation bar link edit when hover*/
+ul.topnav li a:hover{              /*top navigation bar link edit when hover*/
 	color: rgba(255,255,255,0.60);
+	background-color:rgba(255,255,255,0.30);
 	text-decoration:underline;
 	transition: 0.2s;
 }
 #Logo{                               /*my website logo customization*/
 	position: relative;
+	background-color:rgba(28,28,30,1.00);
 	display: inline-block;
 	margin-top: 0%;
 	margin-bottom: 0%;
 	float: left;
 	border: 1px solid #ddd;
-	border-radius: 10%;
+	border-bottom-left-radius: 10%;
+	z-index:1;
 }
+.topnav .icon {
+	display: none;
+	}
 
 #HeaderBackgroundImage{              /*the backdrop image to my homepage.*/
 	position: absolute;
@@ -89,6 +98,7 @@ section#HomePage{
 	background-color:rgba(255,255,255,0.40);
     color: rgba(255,255,255,1.00);
     text-align:center;
+	text-decoration:underline;
 	font-size: 50px;
 	padding: 3px;
 	margin: 25px;
@@ -311,75 +321,59 @@ the icon grew when being hovered upon, in a eased in and out fashion*/
 	margin-bottom: 0%
 }
 
+
 /*All OF THE RESPONSIVE FUNCTIONS TO THE DIFFERENT COMPONENTS TO MY WEBPAGE AS A WHOLE. AND HERE IT ALL IS*/
 
 
-@media only screen and (max-width: 400px){
-    .responsive {/*this points at it's reaction during a phone screen size for my PORTFOLIO behavior*/
-        width: 100%;
-    }
-	#TopNav ul{
-	position: relative;
-	width: 100%;
-	height: 10%;
-	background-color: rgba(0,0,0,0.50);
-	background-position:right;
-	border: solid;
-	border-width: 1px;
-	border-color: rgba(255,255,255,0.20);
-	margin-top: 0%;
-}	
-
-	#TopNav #Logo{/*this addresses the back transparent logo that appears when the screen is phone size*/
-		position: relative;
-		float: right;
-		margin-left: 0;
-		margi-right: 0;
-	}
-	#HeaderBackgroundImage{
-		display: none;
-	}
-	#TopNav ul li{
-		display: inline-block;	
-	}
-	#HomePage{
-		margin-top: 400px;
+@media screen and (max-width: 800px){
+    
+	ul.topnav li{
+	display:none;
 	}
 	
-	#Media_Icon a{/*This is actually the icon themselves for my connect with me page contact*/
-	position: relative;
-	border: solid;
-	border-radius: 20px;
-	border-color: rgba(255,255,255,0);
-	padding-right: 10px;
-	padding-left: 10px;
-    display: inline-block;
-    color: white;
-    font-size: 500%;
-	font-stretch:expanded;
-	}
+	
 }
-@media screen and (min-width:800px){ /*accoring to this part of my code, the drop down icon should disappear if screen width is less than 640px*/
-  .icon a{
-    display:none;
-	}
-}
+	
 
 @media screen and (max-width:800px){ /*this makes my aligned menu bar disappear leaving only the dropdown icon to reign*/
-  .menu{
-    display: none;
+
+#TopNav{
+	position:fixed;
+	bottom: 0%;
+	top:0%;
+	width: 100%;
+	z-index:2;
+}
+
+  ul.topnav li.icon {
+    display: block;
+  }
+  ul.topnav.Responsive {position: relative;}
+  ul.topnav.Responsive li.icon {
+    position: absolute;
+    top: 0;
+  }
+  ul.topnav.Responsive li {
+    float: none;
+    display: inline;
+  }
+  ul.topnav.Responsive li a {
+    display: block;
+    text-align: right;
+  }
+	
+	#HeaderBackgroundImage{
+		display: none;
+		z-index:-2;
 	}
+	
   #Logo{                            /*messing around with logo location here*/
-	float: left;
 	position: relative;
 	padding: 0px;
 	margin: 0px;
+	z-index: 1;
 	}
 
-	
-	#TopNav ul li{
-		margin: 0;
-	}
 	#Media_Icon a{/*This is actually the icon themselves*/
 	position: relative;
 	border: solid;
@@ -391,10 +385,11 @@ the icon grew when being hovered upon, in a eased in and out fashion*/
     color: white;
     font-size: 500%;
 	}
-	.responsive {/*this points to the portfolio behaviour during the screen regular desktop size starting at 700px*/
-        width: 49.99999%;
-        margin: 6px 0;
-    }
+	
+	
+	
+	
+	
 }
 
 @media screen and (max-width:1200px){
